@@ -4,168 +4,211 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin dashboard</title>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="header">
-      <div class="top">
-        <form action="/search" role="search">
-          <label for="search-input"> search<i class="fa fa-search"></i></label>
-          <input
-            type="search"
-            id="search-input"
-            name="q"
-            placeholder="Search..."
-            aria-label="Search through site content"
-          />
-        </form>
-        <div class="profile">
-          <i></i>
-          <img src="" alt="pofile Picture" />
-          <h2>Morgan Oakley</h2>
-        </div>
-      </div>
-
-      <div class="profile2">
-        <img src="" alt="profile" />
-        <p>Hi there,</p>
-        <h2>Morgan Oakley (@Morgan)</h2>
-      </div>
-      <div class="nav">
-        <button>New</button>
-        <button>upload</button>
-        <button>Share</button>
-      </div>
-    </div>
-    <div class="sidebar">
-      <div class="brand">
-        <h1>Dashboard</h1>
-      </div>
-      <div class="menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Messages</a></li>
-          <li><a href="#">History</a></li>
-          <li><a href="#">Tasks</a></li>
-          <li><a href="#">Communities</a></li>
-        </ul>
-      </div>
-
-      <div class="menu2">
-        <ul>
-          <li><a href="#">Setting</a></li>
-          <li><a href="#">Supprt</a></li>
-          <li><a href="#">Privacy</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="contaner">
-      <div class="main-content">
-        <div class="card">
-          <h1>Super Cool Project</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
-            distinctio a asperiores sed laborum voluptates, dolorem fugiat
-            suscipit minima nemo.
-          </p>
-          <div class="icon"></div>
-          <div class="icon"></div>
-          <div class="icon"></div>
-        </div>
-        <div class="card">
-          <h1>Less Cool Project</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
-            distinctio a asperiores sed laborum voluptates, dolorem fugiat
-            suscipit minima nemo.
-          </p>
-          <div class="icon"></div>
-          <div class="icon"></div>
-          <div class="icon"></div>
-        </div>
-        <div class="card">
-          <h1>Imossible App</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
-            distinctio a asperiores sed laborum voluptates, dolorem fugiat
-            suscipit minima nemo.
-          </p>
-          <div class="icon"></div>
-          <div class="icon"></div>
-          <div class="icon"></div>
-        </div>
-        <div class="card">
-          <h1>Easy Peasy App</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
-            distinctio a asperiores sed laborum voluptates, dolorem fugiat
-            suscipit minima nemo.
-          </p>
-          <div class="icon"></div>
-          <div class="icon"></div>
-          <div class="icon"></div>
-        </div>
-        <div class="card">
-          <h1>Ad Blocker</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
-            distinctio a asperiores sed laborum voluptates, dolorem fugiat
-            suscipit minima nemo.
-          </p>
-          <div class="icon"></div>
-          <div class="icon"></div>
-          <div class="icon"></div>
-        </div>
-        <div class="card">
-          <h1>Money Maker</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor
-            distinctio a asperiores sed laborum voluptates, dolorem fugiat
-            suscipit minima nemo.
-          </p>
-          <div class="icon"></div>
-          <div class="icon"></div>
-          <div class="icon"></div>
-        </div>
-      </div>
+    <div class="container">
+      <!-- SIDEBAR  -->
       <aside class="sidebar">
-        <section class="announcements">
-          <h2>announcements</h2>
+        <h1 class="logo">
+          <img
+            src="./icons/view-dashboard.svg"
+            alt="dashboard"
+            class="icon"
+          />Dashboard
+        </h1>
+        <nav class="nav">
+          <ul>
+            <li><img src="icons/home.svg" alt="home" />Home</li>
+            <li>
+              <img
+                src="./icons/card-account-details.svg"
+                alt="profile"
+              />profile
+            </li>
+            <li>
+              <img
+                src="./icons/message-reply-outline.svg"
+                alt="message"
+              />Message
+            </li>
+            <li><img src="./icons/history.svg" alt="history" />History</li>
+            <li><img src="./icons/calendar-check.svg" alt="" />Tasks</li>
+            <li><img src="./icons/account-group.svg" alt="" />Communities</li>
+          </ul>
+        </nav>
 
-          <div class="announcement-item">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
-            amet.
-          </div>
-          <div class="announcement-item">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-            voluptatum.
-          </div>
-          <div class="announcement-item">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-            voluptatum.
-          </div>
-        </section>
-        <section class="trending">
-          <h2>Trending</h2>
-          <div class="trending-item">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-            voluptatum.
-          </div>
-          <div class="trending-item">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-            voluptatum.
-          </div>
-          <div class="trending-item">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-            voluptatum.
-          </div>
-          <div class="trending-item">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-            voluptatum.
-          </div>
-        </section>
+        <div class="nav-bottom">
+          <ul>
+            <li><img src="./icons/cog.svg" alt="" />Settings</li>
+            <li><img src="./icons/help-box-outline.svg" alt="" />Support</li>
+            <li><img src="./icons/security.svg" alt="" />Privacy</li>
+          </ul>
+        </div>
       </aside>
+
+      <!-- HEADER  -->
+      <header class="main-header">
+        <div class="header-left">
+          <img src="./icons/magnify.svg" alt="" />
+        </div>
+        <div class="header-center">
+          <input type="text" placeholder="Search..." class="search-bar" />
+        </div>
+        <div class="header-right">
+          <img src="./icons/bell-ring-outline.svg" alt="" />
+
+          <div class="user-profile">
+            <img src="./img/profile.jpg" alt="" />
+            <p>Morgan Okaley</p>
+          </div>
+          <div class="buttons">
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- PROJECTS -->
+        <section class="projects">
+          <h2>Your Projects</h2>
+          <div class="project-grid">
+            <div class="card">
+              <h3>Super Cool Project</h3>
+              <p>
+                Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                nibh erat, id facilisis felis accumsan nec.
+              </p>
+              <div class="card-icons">
+                <img src="./icons/star-plus-outline.svg" alt="" />
+                <img src="./icons/eye-plus-outline.svg" alt="" />
+                <img src="./icons/share.svg" alt="" />
+              </div>
+            </div>
+            <div class="card">
+              <h3>Less Cool Project</h3>
+              <p>
+                Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque
+                sed dolor tincidunt.
+              </p>
+              <div class="card-icons">
+                <img src="./icons/star-plus-outline.svg" alt="" />
+                <img src="./icons/eye-plus-outline.svg" alt="" />
+                <img src="./icons/share.svg" alt="" />
+              </div>
+            </div>
+            <div class="card">
+              <h3>Impossible App</h3>
+              <p>
+                In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a
+                placerat velit sagittis id.
+              </p>
+              <div class="card-icons">
+                <img src="./icons/star-plus-outline.svg" alt="" />
+                <img src="./icons/eye-plus-outline.svg" alt="" />
+                <img src="./icons/share.svg" alt="" />
+              </div>
+            </div>
+            <div class="card">
+              <h3>Easy Peasy App</h3>
+              <p>
+                Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim
+                urna eget accumsan aliquam.
+              </p>
+              <div class="card-icons">
+                <img src="./icons/star-plus-outline.svg" alt="" />
+                <img src="./icons/eye-plus-outline.svg" alt="" />
+                <img src="./icons/share.svg" alt="" />
+              </div>
+            </div>
+            <div class="card">
+              <h3>Ad Blocker</h3>
+              <p>
+                Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus
+                vel, pharetra hendrerit felis.
+              </p>
+              <div class="card-icons">
+                <img src="./icons/star-plus-outline.svg" alt="" />
+                <img src="./icons/eye-plus-outline.svg" alt="" />
+                <img src="./icons/share.svg" alt="" />
+              </div>
+            </div>
+            <div class="card">
+              <h3>Money Maker</h3>
+              <p>
+                Praesent convallis, libero quis congue elementum, nunc ante
+                faucibus sapien, ac scelerisque tortor purus.
+              </p>
+              <div class="card-icons">
+                <img src="./icons/star-plus-outline.svg" alt="" />
+                <img src="./icons/eye-plus-outline.svg" alt="" />
+                <img src="./icons/share.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RIGHT SIDE INFO -->
+        <aside class="side-info">
+          <div class="announcements">
+            <h2>announcements</h2>
+            <div class="announcement-box">
+              <h4>Site Maintenance</h4>
+              <p>
+                Vestibulum condimentum tellus lacus, in accumsan elit maximus
+                ac.
+              </p>
+            </div>
+            <div class="announcement-box">
+              <h4>Community Share Day</h4>
+              <p>Nam vel lectus tincidunt, rutrum nulla eu, ornare libero.</p>
+            </div>
+            <div class="announcement-box">
+              <h4>Updated Privacy Policy</h4>
+              <p>
+                Vestibulum condimentum tellus lacus, in Nam vel lectus
+                tincidunt, rutrum nulla eu, ornare libero.
+              </p>
+            </div>
+          </div>
+
+          <div class="trending">
+            <h2>Trending</h2>
+            <div class="trend">
+              <img src="./img/profile2.jpg" alt="" />
+              <div class="p-des">
+                <p class="title">@tegan</p>
+                <p class="description">World Peace Builder</p>
+              </div>
+            </div>
+            <div class="trend">
+              <img src="./img/profile.jpg" alt="" />
+              <div class="p-des">
+                <p class="title">@morgan</p>
+                <p class="description">Super Cool Project</p>
+              </div>
+            </div>
+            <div class="trend">
+              <img src="./img/profile2.jpg" alt="" />
+              <div class="p-des">
+                <p class="title">@kendall</p>
+                <p class="description">Life Changing App</p>
+              </div>
+            </div>
+            <div class="trend">
+              <img src="./img/profile3.jpg" alt="" />
+              <div class="p-des">
+                <p class="title">@alex</p>
+                <p class="description">No Traffic Maker</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </main>
     </div>
   </body>
 </html>
