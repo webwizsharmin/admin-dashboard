@@ -7,7 +7,167 @@
 }
 
 body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f1f3f6;
+  color: #333;
+}
+
+.container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 5px;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 100px 1fr;
+  height: 100vh;
+}
+
+/* SIDEBAR  */
+.sidebar {
+  grid-row: 1 / 3;
+  background-color: #1976d2;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.sidebar h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  /* align-self: center; */
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logo img,
+.nav img,
+.nav-bottom img {
+  filter: brightness(0) invert(1);
+  height: 30px;
+  /* align-self: baseline; */
+}
+
+/* HEADER  */
+.header {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-left input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.logo,
+.nav-bottom,
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo,
+.nav li,
+.nav-bottom li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+/* MAIN CONTENT  */
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* PROJECT CARDS */
+.projects h2 {
+  margin-bottom: 15px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(autofill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 10px solid gold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.card-icons img {
+  width: 20px;
+}
+
+.announcements,
+.trending {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.announcement-box {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.announcement-box:last-child {
+  border-bottom: none;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.trend img {
+  height: 75px;
+  border-radius: 50%;
 }
