@@ -15,7 +15,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 250px 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: 150px 1fr;
   height: 100vh;
 }
 
@@ -28,7 +28,12 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+
   padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  /* overflow-x: hidden; */
+  /* padding-bottom: 30px; */
 }
 
 .sidebar h1 {
@@ -54,29 +59,6 @@ body {
   height: 30px;
   /* align-self: baseline; */
 }
-
-/* HEADER  */
-.header {
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  align-items: center;
-  gap: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.header-left {
-  display: flex;
-  flex-direction: row;
-}
-
-.header-left input {
-  width: 100%;
-  padding: 8px 12px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-}
-
 .logo,
 .nav-bottom,
 .nav ul {
@@ -94,6 +76,77 @@ body {
   padding: 8px 0;
 }
 
+/* HEADER  */
+.header {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+}
+
+.header-left-top {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  gap: 1rem;
+  /* padding: 1rem; */
+}
+.header-left input {
+  width: 60%;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.header img {
+  height: 20px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+}
+
+.user-profile img {
+  height: 60px;
+  justify-self: center;
+  /* border: 2px solid black; */
+  /* border-radius: 50%; */
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.header-right-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 2rem 2rem 0; */
+}
+
+button {
+  background-color: #1976d2;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
 /* MAIN CONTENT  */
 .main-content {
   display: grid;
@@ -119,9 +172,10 @@ body {
   border-radius: 10px;
   border-left: 10px solid gold;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 .card h3 {
