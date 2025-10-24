@@ -47,7 +47,7 @@ body {
 }
 
 .sidebar li {
-  margin: 15px 0;
+  /* margin: 15px 0; */
   cursor: pointer;
   font-size: 16px;
 }
@@ -79,74 +79,107 @@ body {
 /* HEADER  */
 .header {
   background-color: #fff;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-column: 1fr 1fr;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 20px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
 }
 
 .header-left {
   display: flex;
   flex-direction: column;
-  padding-left: 0.5rem;
+  gap: 0.5rem;
 }
 
 .header-left-top {
   display: flex;
   /* flex-direction: row; */
   align-items: center;
-  gap: 1rem;
+  gap: 10px;
   /* padding: 1rem; */
 }
-.header-left input {
-  width: 60%;
+
+.search-bar {
+  width: 40vw;
   padding: 8px 12px;
   border-radius: 20px;
+  font-size: 14px;
   border: 1px solid #ccc;
 }
 
-.header img {
-  height: 20px;
-}
-
-.user-profile {
+.header-left-bottom .user-profile {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding-top: 1.5rem;
+  gap: 10px;
 }
 
-.user-profile img {
-  height: 60px;
-  justify-self: center;
-  /* border: 2px solid black; */
-  /* border-radius: 50%; */
+header img {
+  height: 26px;
+}
+
+.description p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.description h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .header-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 15px;
 }
 
 .header-right-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  /* padding: 0 2rem 2rem 0; */
+  gap: 15px;
 }
 
-button {
-  background-color: #1976d2;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 16px;
-  margin-bottom: 1rem;
+.header-right-top .user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
+.header-right-top p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* BUTTONS  */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 15px;
+  background: #1976d2;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: backround-color 0.3s ease;
+}
+.header .user-profile img {
+  width: 50px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 /* MAIN CONTENT  */
 .main-content {
   display: grid;
@@ -157,12 +190,14 @@ button {
 }
 
 /* PROJECT CARDS */
-.projects h2 {
-  margin-bottom: 15px;
+.projects h2,
+aside h2 {
+  margin: 15px 10px;
 }
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(autofill, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(3, minmax(300, 500px));
   gap: 20px;
 }
 
@@ -174,20 +209,22 @@ button {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: auto auto auto;
 }
 
 .card h3 {
-  margin-bottom: 8px;
+  grid-column: 1 / 3;
+  margin-bottom: 0;
 }
 
 .card p {
+  grid-column: 1 / 3;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .card-icons {
+  grid-column: 2 / 3;
   display: flex;
   justify-content: flex-end;
   gap: 10px;
@@ -197,6 +234,10 @@ button {
   width: 20px;
 }
 
+.side-ifo {
+  display: grid;
+  gap: 10px;
+}
 .announcements,
 .trending {
   background: #fff;
